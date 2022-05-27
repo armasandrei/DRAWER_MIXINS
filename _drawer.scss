@@ -1,0 +1,58 @@
+$color: brown;
+
+$darkColor: createDark($color);
+$midColor: createMid($color);
+$lightColor: createLight($color);
+
+body{
+    
+    background-color: $darkColor;
+    color: $lightColor;
+}
+
+
+.drawer{
+    background-color: $color;
+    padding: 10px;
+   
+    nav{
+        // width: 300px;
+        &:target{
+            width: 300px;
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+        
+      li{
+          a{
+            display: block;
+            padding: 5px 5px 15px 5px;
+            color: lightColor;
+                @include borderBottom;
+            font-size: 0;
+            height: 50px;
+          
+            &:hover {
+                background-color: $darkColor;
+                color: darkorange;
+
+            }
+            img {
+                filter: invert(100);
+                margin-right: 10px;
+                transform: translateY(10px);
+            }
+           
+           }
+
+           &:last-child a {
+            border: none;
+
+           }
+        }   
+
+    }
+}

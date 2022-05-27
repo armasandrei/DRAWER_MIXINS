@@ -1,0 +1,17 @@
+body{
+    // background-color: $testColor;
+    color: white;
+    font-family: arial;
+}
+
+main{
+    display: flex;
+}
+section{
+   
+    padding: 1em;
+   
+    h1{
+        @include borderBottom;
+    }
+}

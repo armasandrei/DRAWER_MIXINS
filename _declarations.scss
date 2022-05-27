@@ -1,0 +1,21 @@
+//functions
+//css: var(), calc (), 
+
+
+// $basecolor ------->createpallete()--------> 5 x (colors)
+
+@function createDark($baseColor) {
+       @return darken($baseColor,30%);
+}
+@function createLight($baseColor) {
+    @return lighten($baseColor,100%);
+}
+@function createMid($baseColor) {
+       @return lighten($baseColor,20%);
+    }
+
+    //mixins
+ 
+    @mixin borderBottom {
+        border-bottom: 1px solid $midColor ;
+    }
